@@ -24,7 +24,7 @@ public class restAssured {
 		System.out.println(response.asPrettyString());
 	}
 	
-	@Test
+	@Test(enabled = false)
 	public void restAssuredPost() {
 		
 		RestAssured.baseURI = "https://reqres.in/"; 
@@ -39,13 +39,28 @@ public class restAssured {
 		System.out.println(response.statusLine());
 		System.out.println(response.asPrettyString());
 		
-		
-		
-		
-		
-		
-
 	}
+	
+	@Test
+	public void restAssuredPut() {
+		
+		RestAssured.baseURI = "https://reqres.in/";
+		
+		RequestSpecification requestSpecification = RestAssured.given().header("Content-Type","application/json").body("{\r\n"
+				+ "    \"name\": \"morpheus\",\r\n"
+				+ "    \"job\": \"zion resident\"\r\n"
+				+ "}");
+				
+		
+		Response response = requestSpecification.request(Method.PUT,"api/users/2");
+		
+		System.out.println(response.statusLine());
+		System.out.println(response.asPrettyString());
+	}
+	
+	
+	
+	
 
 
 
