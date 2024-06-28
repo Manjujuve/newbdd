@@ -40,6 +40,10 @@ public class restAssured {
 		System.out.println(response.asPrettyString());
 		
 		
+		
+		
+		
+		
 
 	}
 
