@@ -5,7 +5,7 @@
     <classes>
       <class name="org.restapi.restAssured">
         <methods>
-          <include name="UserRegistrationSuccessful"/>
+          <include name="restAssuredPost"/>
         </methods>
       </class> <!-- org.restapi.restAssured -->
     </classes>
