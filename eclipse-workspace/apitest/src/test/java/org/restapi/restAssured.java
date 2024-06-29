@@ -1,6 +1,5 @@
 package org.restapi;
 
-
 import org.testng.annotations.Test;
 
 //import org.junit.Test;
@@ -8,6 +7,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 
 public class restAssured {
@@ -57,6 +57,9 @@ public class restAssured {
 		System.out.println(response.statusLine());
 		System.out.println(response.asPrettyString());
 	}
+	
+	
+	
 	
 	
 	
