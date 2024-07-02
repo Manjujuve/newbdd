@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 
 
-@CucumberOptions(features="src/test/java/RestApiFeature/RestApi.feature", glue="org.restapistepdef")
+@CucumberOptions(features="src/test/java/RestApiFeature/RestApi.feature", glue="org.restapistepdef", monochrome = true)
 
 
 

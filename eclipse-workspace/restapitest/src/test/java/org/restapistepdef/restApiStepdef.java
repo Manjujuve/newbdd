@@ -23,7 +23,7 @@ public class restApiStepdef extends RestApiBaseclass  {
 		BaseAPI("https://reqres.in/");
 	    
 	}
-	@When("I send a GET request")
+	@When("I send a GET request") 
 	public void i_send_a_get_request() {
 		
 		 response  = get("api/users/2");
@@ -32,7 +32,8 @@ public class restApiStepdef extends RestApiBaseclass  {
 	@Then("the response status code should be {int}")
 	public void the_response_status_code_should_be(Integer int1) {
 		
-		checkStatusCode(response, 200);
+	checkStatusCode(response, 200);
+		System.out.println(response.asPrettyString());
 	   
 	}
 
