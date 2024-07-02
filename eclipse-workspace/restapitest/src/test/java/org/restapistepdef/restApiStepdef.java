@@ -36,7 +36,7 @@ public class restApiStepdef extends RestApiBaseclass {
 		response = get("api/user?page=2&id=7");
 	
 		checkStatusCode(response, 200);
-		System.out.println(response.asString());
+		System.out.println(response.asPrettyString());
 
 	}
 
