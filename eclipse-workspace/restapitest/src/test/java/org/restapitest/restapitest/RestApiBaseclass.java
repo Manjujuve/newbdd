@@ -1,14 +1,17 @@
 package org.restapitest.restapitest;
 
+import org.testng.annotations.Test;
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+
 public class RestApiBaseclass {
 
 
-
+	@Test
 	public void BaseAPI(String baseUri) {
 
 		RestAssured.baseURI= baseUri;
@@ -16,7 +19,7 @@ public class RestApiBaseclass {
 		RestAssured.given();
 
 	}
-
+	@Test
 	public Response get(String endpoint) {
 		return ( RestAssured.given()
 				.when()
@@ -24,6 +27,7 @@ public class RestApiBaseclass {
 
 	}
 
+	@Test
 	public Response post(String endpoint, Object body) {
 		return RestAssured.given()
 				.body(body)
@@ -32,6 +36,7 @@ public class RestApiBaseclass {
 
 	}
 
+	@Test
 	public Response put(String endpoint, Object body) {
 		return RestAssured.given()
 				.body(body)
@@ -39,6 +44,7 @@ public class RestApiBaseclass {
 				.put(endpoint);
 	}
 
+	@Test
 	public void checkStatusCode(Response response, int expectedStatusCode) {
 		response.then()
 		.statusCode(expectedStatusCode);
