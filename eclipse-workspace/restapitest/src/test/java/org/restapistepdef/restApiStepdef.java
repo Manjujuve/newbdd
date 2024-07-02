@@ -34,7 +34,7 @@ public class restApiStepdef extends RestApiBaseclass {
 
 		BaseAPI("https://reqres.in/");
 		response = get("api/user?page=2&id=7");
-		System.out.println(response.asPrettyString());
+	
 		checkStatusCode(response, 200);
 		System.out.println(response.asString());
 
@@ -45,7 +45,7 @@ public class restApiStepdef extends RestApiBaseclass {
 	public void the_response_status_code_should_be(Integer int1) {
 
 		BaseAPI("https://reqres.in/");
-		response = get("api/user?page=2&id=7");
+		
 		checkStatusCode(response, 200);
 		System.out.println(response.asString());
  
