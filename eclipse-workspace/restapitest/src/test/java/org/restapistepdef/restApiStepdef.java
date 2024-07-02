@@ -48,6 +48,7 @@ public class restApiStepdef extends RestApiBaseclass {
 		
 		checkStatusCode(response, 200);
 		System.out.println(response.asString());
+		System.out.println();
  
 	}
 
