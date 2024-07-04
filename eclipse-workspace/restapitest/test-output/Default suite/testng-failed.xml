@@ -5,6 +5,8 @@
     <classes>
       <class name="org.restapistepdef.restApiStepdef">
         <methods>
+          <include name="BaseAPI"/>
+          <include name="checkStatusCode"/>
           <include name="the_response_status_code_should_be"/>
         </methods>
       </class> <!-- org.restapistepdef.restApiStepdef -->

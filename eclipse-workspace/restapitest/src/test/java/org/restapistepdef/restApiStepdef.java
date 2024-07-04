@@ -28,7 +28,7 @@ public class restApiStepdef extends RestApiBaseclass {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	@When("I send a GET request")
 	public void i_send_a_get_request() {
 
